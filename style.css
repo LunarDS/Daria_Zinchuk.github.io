@@ -1,4 +1,4 @@
-/* ============================================
+/* ============================================downnload
    DESIGN TOKENS — Edit colors & spacing here
    ============================================ */
 
@@ -68,6 +68,7 @@
   padding: 0;
 }
 
+
 html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
@@ -89,11 +90,15 @@ body.menu-open {
   overflow: hidden;
 }
 
+
+
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
+
+
 
 a {
   color: inherit;
@@ -207,6 +212,7 @@ button {
   background: linear-gradient(90deg, var(--color-accent), var(--color-accent-hover));
   transition: width 0.1s linear;
 }
+
 
 /* ============================================
    Custom Cursor
@@ -393,6 +399,13 @@ button {
   display: block;
 }
 
+.about__highlight {
+  color: var(--color-accent);
+  font-weight: 700;
+  font-size: 1.1em;
+}
+
+
 /* Burger Menu */
 .burger {
   display: none;
@@ -517,6 +530,33 @@ button {
   border-color: var(--color-text);
   background: var(--color-text);
   color: var(--color-bg);
+}
+
+.btn--download {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-hover));
+  color: #FFFFFF;
+  border: none;
+  padding: 0.875rem 2rem;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
+  box-shadow: 0 4px 20px rgba(167, 139, 250, 0.3);
+}
+
+.btn--download:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(167, 139, 250, 0.4);
+}
+
+.btn--download svg {
+  transition: transform var(--transition-fast);
+}
+
+.btn--download:hover svg {
+  transform: translateY(2px);
 }
 
 /* ============================================
@@ -695,6 +735,154 @@ button {
   margin-bottom: 0;
 }
 
+
+
+
+
+
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.feature-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 28px;
+  min-height: 340px;
+  border-radius: 28px;
+  background: #fff;
+  border: 1px solid #ECE7FF;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 60px rgba(112, 87, 255, 0.08);
+}
+
+/* Номер карточки */
+.feature-card__number {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #836CFF;
+  line-height: 1;
+  margin-bottom: 8px;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.feature-card:hover .feature-card__number {
+  opacity: 1;
+}
+
+.icon-wrap {
+  width: 72px;
+  height: 72px;
+  border-radius: 22px;
+  background: #F6F3FF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 22px;
+  flex-shrink: 0;
+}
+
+.icon-wrap img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.feature-card h3 {
+  font-size: 22px;
+  line-height: 1.3;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+  color: #1A1A1A;
+}
+
+.feature-card p {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .features {
+    padding: 60px 16px;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .feature-card {
+    padding: 24px 20px;
+    min-height: auto;
+  }
+  
+  .feature-card__number {
+    font-size: 2rem;
+  }
+  
+  .feature-card h3 {
+    font-size: 20px;
+  }
+  
+  .icon-wrap {
+    width: 60px;
+    height: 60px;
+    border-radius: 18px;
+  }
+  
+  .icon-wrap img {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+
+
+@media(max-width:1200px){
+
+.features-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:700px){
+
+.features-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.feature-card{
+
+min-height:auto;
+
+}
+
+}
 /* ===========================
    ABOUT FEATURES
    =========================== */
@@ -932,6 +1120,7 @@ button {
   font-size: 0.9375rem;
   color: var(--color-text-secondary);
 }
+
 
 /* ============================================
    Projects
@@ -1678,5 +1867,4 @@ a.contact-link:hover {
     opacity: 1;
     transform: none;
   }
-}
 }

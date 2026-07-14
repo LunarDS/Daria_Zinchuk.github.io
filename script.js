@@ -22,7 +22,7 @@ const PROJECTS = [
   {
     id: "Fast Bowling-logotype",
     title: "Fast Bowling",
-    category: "Логотипы",
+    category: "логотипы",
     description: "Современный формат динамичных боулинг-дуэлей, разработанный Континентальной Лигой Боулинга (КЛБ).",
     image: "assets/images/projects/project-01.png",
     goals: "Разработать современный и узнаваемый логотип для боулинг-клуба Fast Bowling, отражающий динамику игры и соответствующий фирменному стилю проекта.",
@@ -33,7 +33,7 @@ const PROJECTS = [
   {
     id: "фили",
     title: "ФИЛИ",
-    category: "Брендинг",
+    category: "брендинг",
     description: "Разработка логотипа и фирменного стиля для ледовой арены «ФИЛИ» (Москва).",
     image: "assets/images/projects/project-03.png",
     goals: "Создать современный и запоминающийся логотип с универсальной системой айдентики для цифровых и печатных носителей.",
@@ -44,7 +44,7 @@ const PROJECTS = [
   {
     id: "Linebet",
     title: "Linebet",
-    category: "Мерч",
+    category: "мерч",
     description: "Разработка дизайна фирменного мерча Linebet для выставок и промо-мероприятий.",
     image: "assets/images/projects/project-06.png",
     goals: "Разработать яркий и узнаваемый дизайн мерча, который привлекает внимание, усиливает визуальную идентичность бренда и эффективно представляет компанию на выставках.",
@@ -55,7 +55,7 @@ const PROJECTS = [
   {
     id: "Кузнецкбизнесбанк",
     title: "Кузнецкбизнесбанк",
-    category: "Полиграфия",
+    category: "полиграфия",
     description: "Разработка дизайна полиграфической продукции для рекламной кампании Кузнецкбизнесбанка.",
     image: "assets/images/projects/project-09.png",
     goals: "Создать серию рекламных материалов в фирменном стиле банка и подготовить макеты к качественной тиражной печати. ",
@@ -66,7 +66,7 @@ const PROJECTS = [
   {
     id: "Клаксон",
     title: "Автошкола Клаксон",
-    category: "Баннера РСЯ",
+    category: "баннера РСЯ",
     description: "Разработка и адаптация рекламных баннеров для рекламной сети Яндекса (РСЯ).",
     image: "assets/images/projects/project-11.png",
     goals: "Создать привлекательные рекламные креативы, которые эффективно привлекают внимание аудитории и соответствуют требованиям Яндекс Рекламы.",
@@ -77,7 +77,7 @@ const PROJECTS = [
   {
     id: "craft-marketplace",
     title: "Kapous Professional",
-    category: "Карточки для маркетплейсов",
+    category: "карточки для маркетплейсов",
     description: "Оформление карточек товаров для линейки средств по уходу за волосами Kapous Professional.",
     image: "assets/images/projects/project-15.png",
     goals: "Повысить привлекательность карточки, визуально выделить продукт среди конкурентов и увеличить конверсию за счет понятной презентации преимуществ.",
@@ -88,7 +88,7 @@ const PROJECTS = [
   {
     id: "Linebet_2",
     title: "Linebet",
-    category: "Баннера",
+    category: "баннера",
     description: "Дизайн сторис, публикаций и рекламных баннеров для социальных сетей Linebet.",
     image: "assets/images/projects/project-17.png",
     goals: "Создать единую визуальную систему контента на основе фирменного стиля бренда.",
@@ -100,12 +100,13 @@ const PROJECTS = [
 
 /* Category pill → filter mapping */
 const CATEGORY_MAP = {
-  logotypes: "logotypes",
-  branding: "branding",
-  print: "print",
-  merch: "merch",
-  marketplace: "marketplace",
-  banners: "web"
+  logotypes: "логотипы",
+  branding: "брендинг",
+  print: "полиграфия",
+  merch: "мерч",
+  bannersYAN: "баннера РСЯ",
+  marketplace: "карточки для маркетплейсов",
+  banners: "баннера"
 };
 
 /* Software icon SVG paths */
@@ -558,6 +559,25 @@ function onScroll() {
   updateBackToTop();
   updateActiveNav();
 }
+
+
+function updateSectionBackground() {
+  const sections = document.querySelectorAll('.section');
+  let currentSection = null;
+  sections.forEach(section => {
+    const rect = section.getBoundingClientRect();
+    if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+      currentSection = section;
+    }
+  });
+  if (currentSection) {
+    const bgColor = currentSection.dataset.bg || 'var(--color-bg)';
+    document.body.style.backgroundColor = bgColor;
+    document.body.style.transition = 'background-color 0.6s ease';
+  }
+}
+window.addEventListener('scroll', updateSectionBackground);
+
 
 /* ============================================
    Page Transitions
