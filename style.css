@@ -1,9 +1,5 @@
-/* ============================================downnload
-   DESIGN TOKENS — Edit colors & spacing here
-   ============================================ */
-
 :root {
-  /* Colors — Light Mode */
+   
   --color-bg: #FAFAFA;
   --color-bg-elevated: #FFFFFF;
   --color-text: #111111;
@@ -13,11 +9,11 @@
   --color-border: #EAEAEA;
   --color-overlay: rgba(17, 17, 17, 0.4);
 
-  /* Typography */
+
   --font-heading: "Space Grotesk", system-ui, sans-serif;
   --font-body: "Inter", system-ui, sans-serif;
 
-  /* Spacing */
+
   --space-xs: 0.5rem;
   --space-sm: 1rem;
   --space-md: 1.5rem;
@@ -25,7 +21,7 @@
   --space-xl: 4rem;
   --space-2xl: 6rem;
 
-  /* Layout */
+
   --container-max: 1200px;
   --container-padding: 1.5rem;
   --header-height: 72px;
@@ -34,7 +30,7 @@
   --radius-lg: 20px;
   --radius-full: 999px;
 
-  /* Effects */
+
   --shadow-sm: 0 1px 2px rgba(17, 17, 17, 0.04);
   --shadow-md: 0 8px 30px rgba(17, 17, 17, 0.06);
   --shadow-lg: 0 20px 60px rgba(17, 17, 17, 0.08);
@@ -43,7 +39,7 @@
   --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Dark Mode Tokens */
+
 [data-theme="dark"] {
   --color-bg: #0A0A0A;
   --color-bg-elevated: #141414;
@@ -56,9 +52,6 @@
   --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.4);
 }
 
-/* ============================================
-   RESET & BASE
-   ============================================ */
 
 *,
 *::before,
@@ -126,9 +119,7 @@ button {
   color: #FFFFFF;
 }
 
-/* ============================================
-   UTILITIES
-   ============================================ */
+
 
 .container {
   width: 100%;
@@ -192,9 +183,7 @@ button {
   overflow: hidden;
 }
 
-/* ============================================
-   Scroll Progress
-   ============================================ */
+
 
 .scroll-progress {
   position: fixed;
@@ -214,9 +203,6 @@ button {
 }
 
 
-/* ============================================
-   Custom Cursor
-   ============================================ */
 
 .cursor {
   position: fixed;
@@ -229,7 +215,7 @@ button {
   transform: translate(-50%, -50%);
   transition: width 0.2s, height 0.2s, opacity 0.2s;
   opacity: 0;
-  box-shadow: 0 0 12px rgba(167, 139, 250, 0.4); /* Добавляем свечение */
+  box-shadow: 0 0 12px rgba(167, 139, 250, 0.4); 
 }
 
 .cursor--follower {
@@ -238,7 +224,7 @@ button {
   background: transparent;
   border: 1px solid var(--color-accent);
   opacity: 0;
-  box-shadow: 0 0 20px rgba(167, 139, 250, 0.1); /* Свечение для follower */
+  box-shadow: 0 0 20px rgba(167, 139, 250, 0.1);
 }
 
 .cursor.is-active {
@@ -264,9 +250,6 @@ button {
   }
 }
 
-/* ============================================
-   Header
-   ============================================ */
 
 .header {
   position: fixed;
@@ -328,7 +311,7 @@ button {
   gap: var(--space-sm);
 }
 
-/* Navigation */
+
 .nav__list {
   display: flex;
   align-items: center;
@@ -369,7 +352,7 @@ button {
   transform-origin: left;
 }
 
-/* Theme Toggle */
+
 .theme-toggle {
   display: flex;
   align-items: center;
@@ -406,7 +389,7 @@ button {
 }
 
 
-/* Burger Menu */
+
 .burger {
   display: none;
   flex-direction: column;
@@ -439,7 +422,7 @@ button {
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* Mobile Menu */
+
 .mobile-menu {
   position: fixed;
   inset: 0;
@@ -476,9 +459,7 @@ button {
   color: var(--color-accent);
 }
 
-/* ============================================
-   Buttons
-   ============================================ */
+
 
 .btn {
   display: inline-flex;
@@ -559,9 +540,7 @@ button {
   transform: translateY(2px);
 }
 
-/* ============================================
-   Hero
-   ============================================ */
+
 
 .hero {
   min-height: 100vh;
@@ -696,9 +675,7 @@ button {
   object-fit: cover;
 }
 
-/* ============================================
-   About
-   ============================================ */
+
 
 .about__grid {
   display: grid;
@@ -736,11 +713,6 @@ button {
 }
 
 
-
-
-
-
-
 .features-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -764,7 +736,7 @@ button {
   box-shadow: 0 25px 60px rgba(112, 87, 255, 0.08);
 }
 
-/* Номер карточки */
+
 .feature-card__number {
   font-family: 'Space Grotesk', system-ui, sans-serif;
   font-size: 1.5rem;
@@ -813,7 +785,7 @@ button {
   margin: 0;
 }
 
-/* Адаптивность */
+
 @media (max-width: 1024px) {
   .features-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -883,9 +855,7 @@ min-height:auto;
 }
 
 }
-/* ===========================
-   ABOUT FEATURES
-   =========================== */
+
 
 .feature-cards {
   display: grid;
@@ -894,7 +864,7 @@ min-height:auto;
   margin-top: var(--space-xl);
 }
 
-/* CARD */
+
 .feature-card {
   display: flex;
   flex-direction: column;
@@ -921,7 +891,7 @@ min-height:auto;
   transform: scale(1.06) rotate(2deg);
 }
 
-/* Scroll reveal — staggered entrance */
+
 .feature-card.reveal {
   transform: translateY(30px);
   transition:
@@ -942,7 +912,7 @@ min-height:auto;
   transform: translateY(-8px);
 }
 
-/* ICON */
+
 .feature-card__icon {
   display: flex;
   align-items: center;
@@ -977,7 +947,7 @@ min-height:auto;
   max-width: 280px;
 }
 
-/* Dark mode — cards stay light for contrast */
+
 [data-theme="dark"] .feature-card {
   background: #FFFFFF;
   border-color: rgba(167, 139, 250, 0.4);
@@ -991,9 +961,7 @@ min-height:auto;
   color: #666666;
 }
 
-/* ============================================
-   Skills
-   ============================================ */
+
 
 .skills-grid {
   display: grid;
@@ -1054,9 +1022,7 @@ min-height:auto;
   background: var(--color-accent);
 }
 
-/* ============================================
-   Education
-   ============================================ */
+
 
 .timeline {
   position: relative;
@@ -1122,9 +1088,7 @@ min-height:auto;
 }
 
 
-/* ============================================
-   Projects
-   ============================================ */
+
 
 .filter {
   display: flex;
@@ -1243,9 +1207,7 @@ min-height:auto;
   line-height: 1.5;
 }
 
-/* ============================================
-   Contact
-   ============================================ */
+
 
 .contact__grid {
   display: grid;
@@ -1371,9 +1333,6 @@ a.contact-link:hover {
   background: rgba(167, 139, 250, 0.08);
 }
 
-/* ============================================
-   Back to Top
-   ============================================ */
 
 .back-to-top {
   position: fixed;
@@ -1405,9 +1364,6 @@ a.contact-link:hover {
   background: var(--color-accent-hover);
 }
 
-/* ============================================
-   Modal
-   ============================================ */
 
 .modal {
   position: fixed;
@@ -1576,9 +1532,7 @@ a.contact-link:hover {
   border-radius: var(--radius-full);
 }
 
-/* ============================================
-   Lightbox
-   ============================================ */
+
 
 .lightbox {
   position: fixed;
@@ -1639,9 +1593,6 @@ a.contact-link:hover {
   transform: scale(1);
 }
 
-/* ============================================
-   Animations
-   ============================================ */
 
 @keyframes fadeUp {
   from {
@@ -1674,9 +1625,6 @@ a.contact-link:hover {
   animation: fadeIn 0.4s ease;
 }
 
-/* ============================================
-   Responsive
-   ============================================ */
 
 @media (max-width: 1024px) {
   .nav {
