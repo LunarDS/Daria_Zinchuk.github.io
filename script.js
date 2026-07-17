@@ -1,11 +1,4 @@
-/**
- * Portfolio — Main JavaScript
- * Edit PROJECTS and SKILLS arrays to update content easily.
- */
 
-/* ============================================
-   DATA — Edit content here
-   ============================================ */
 
 const SKILLS = [
   { name: "Figma", icon: "figma", level: 4 },
@@ -98,7 +91,7 @@ const PROJECTS = [
   }
 ];
 
-/* Category pill → filter mapping */
+
 const CATEGORY_MAP = {
   logotypes: "логотипы",
   branding: "брендинг",
@@ -109,7 +102,7 @@ const CATEGORY_MAP = {
   banners: "баннера"
 };
 
-/* Software icon SVG paths */
+
 const SKILL_ICONS = {
   figma: '<img src="assets/images/Figma-logo.png" alt="figma" width="28" height="28">',
   photoshop: '<svg width="28" height="28" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="4" fill="#001E36"/><text x="12" y="16" text-anchor="middle" fill="#31A8FF" font-size="10" font-weight="700" font-family="Arial">Ps</text></svg>',
@@ -121,9 +114,7 @@ const SKILL_ICONS = {
   blender: '<img src="assets/images/blender-logo.png" alt="Blender" width="28" height="28">'
 };
 
-/* ============================================
-   DOM References
-   ============================================ */
+
 
 const header = document.getElementById("header");
 const mainNav = document.getElementById("mainNav");
@@ -146,9 +137,7 @@ const lightboxImage = document.getElementById("lightboxImage");
 const customCursor = document.getElementById("customCursor");
 const customCursorFollower = document.getElementById("customCursorFollower");
 
-/* ============================================
-   Render Skills
-   ============================================ */
+
 
 function renderSkills() {
   skillsGrid.innerHTML = SKILLS.map((skill) => {
@@ -166,9 +155,7 @@ function renderSkills() {
   }).join("");
 }
 
-/* ============================================
-   Render Projects
-   ============================================ */
+
 
 function renderProjects() {
   projectsGrid.innerHTML = PROJECTS.map((project) => `
@@ -195,9 +182,7 @@ function renderProjects() {
   `).join("");
 }
 
-/* ============================================
-   Mobile Menu
-   ============================================ */
+
 
 function toggleMobileMenu(forceClose) {
   const isOpen = forceClose ? false : !mobileMenu.classList.contains("is-open");
@@ -217,9 +202,7 @@ function initMobileMenu() {
   });
 }
 
-/* ============================================
-   Smooth Scrolling
-   ============================================ */
+
 
 function initSmoothScroll() {
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -241,9 +224,6 @@ function initSmoothScroll() {
   });
 }
 
-/* ============================================
-   Active Navigation Highlight
-   ============================================ */
 
 function updateActiveNav() {
   const sections = ["projects", "skills", "about", "contact"];
@@ -268,17 +248,13 @@ function updateActiveNav() {
   });
 }
 
-/* ============================================
-   Header Scroll State
-   ============================================ */
+
 
 function updateHeaderOnScroll() {
   header.classList.toggle("is-scrolled", window.scrollY > 20);
 }
 
-/* ============================================
-   Scroll Progress
-   ============================================ */
+
 
 function updateScrollProgress() {
   const scrollTop = window.scrollY;
@@ -287,9 +263,6 @@ function updateScrollProgress() {
   scrollProgressBar.style.width = `${progress}%`;
 }
 
-/* ============================================
-   Back to Top
-   ============================================ */
 
 function updateBackToTop() {
   backToTop.classList.toggle("is-visible", window.scrollY > 600);
@@ -301,9 +274,7 @@ function initBackToTop() {
   });
 }
 
-/* ============================================
-   Scroll Animations
-   ============================================ */
+
 
 function initScrollAnimations() {
   const revealElements = document.querySelectorAll(".reveal");
@@ -323,9 +294,7 @@ function initScrollAnimations() {
   revealElements.forEach((el) => observer.observe(el));
 }
 
-/* ============================================
-   Category Filtering
-   ============================================ */
+
 
 let activeFilter = "all";
 
@@ -378,9 +347,6 @@ function initCategoryFilter() {
   });
 }
 
-/* ============================================
-   Project Modal
-   ============================================ */
 
 function openProjectModal(projectId) {
   const project = PROJECTS.find((p) => p.id === projectId);
@@ -444,9 +410,6 @@ function initProjectModal() {
   modalOverlay.addEventListener("click", closeProjectModal);
 }
 
-/* ============================================
-   Image Lightbox
-   ============================================ */
 
 function openLightbox(src, alt) {
   lightboxImage.src = src;
@@ -466,9 +429,7 @@ function initLightbox() {
   lightboxOverlay.addEventListener("click", closeLightbox);
 }
 
-/* ============================================
-   Dark / Light Mode
-   ============================================ */
+
 
 function setTheme(theme) {
   document.documentElement.setAttribute("data-theme", theme);
@@ -491,9 +452,7 @@ function initThemeToggle() {
   });
 }
 
-/* ============================================
-   Custom Cursor
-   ============================================ */
+
 
 function initCustomCursor() {
   if (window.matchMedia("(hover: none)").matches || window.innerWidth <= 1024) return;
@@ -535,9 +494,7 @@ function initCustomCursor() {
   });
 }
 
-/* ============================================
-   Keyboard Navigation
-   ============================================ */
+
 
 function initKeyboardNav() {
   document.addEventListener("keydown", (event) => {
@@ -549,9 +506,7 @@ function initKeyboardNav() {
   });
 }
 
-/* ============================================
-   Scroll Handler
-   ============================================ */
+
 
 function onScroll() {
   updateHeaderOnScroll();
@@ -579,17 +534,13 @@ function updateSectionBackground() {
 window.addEventListener('scroll', updateSectionBackground);
 
 
-/* ============================================
-   Page Transitions
-   ============================================ */
+
 
 function initPageTransition() {
   document.body.classList.add("page-transition");
 }
 
-/* ============================================
-   Initialize
-   ============================================ */
+
 
 function init() {
   renderSkills();
