@@ -7,7 +7,6 @@
   <meta name="theme-color" content="#FAFAFA">
   <title>Портфолио - Зинчук Дарья</title>
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -16,16 +15,13 @@
 </head>
 <body>
 
-  <!-- Scroll Progress -->
   <div class="scroll-progress" aria-hidden="true">
     <div class="scroll-progress__bar" id="scrollProgressBar"></div>
   </div>
 
-  <!-- Custom Cursor -->
   <div class="cursor" id="customCursor" aria-hidden="true"></div>
   <div class="cursor cursor--follower" id="customCursorFollower" aria-hidden="true"></div>
 
-  <!-- HEADER -->
   <header class="header" id="header">
     <div class="container header__inner">
       <a href="#hero" class="header__logo" aria-label="Daria Zinchuk — Home">
@@ -60,7 +56,6 @@
       </div>
     </div>
 
-    <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
       <nav aria-label="Mobile navigation">
         <ul class="mobile-menu__list">
@@ -75,7 +70,6 @@
 
   <main id="mainContent">
 
-    <!-- HERO -->
     <section class="hero section" id="hero">
       <div class="container hero__inner">
         <div class="hero__content reveal">
@@ -91,7 +85,6 @@
             </ul>
           </div>
 
-          <!-- Category Pills -->
           <div class="category-pills" aria-label="Jump to project categories">
             <a href="#category-logotypes" class="category-pill">логотипы</a>
             <a href="#category-branding" class="category-pill">брендинг</a>
@@ -133,7 +126,6 @@
     </section>
 
 
- <!-- PROJECTS -->
     <section class="projects section" id="projects">
       <div class="container">
         <div class="section-header reveal">
@@ -142,7 +134,6 @@
           <p class="section-subtitle">Подборка работ в области брендинга, печати и цифрового дизайна</p>
         </div>
 
-        <!-- Category Filter -->
         <div class="filter reveal" id="projectFilter" role="group" aria-label="Filter projects by category">
           <button class="filter__btn is-active" type="button" data-filter="all">All</button>
           <button class="filter__btn" type="button" data-filter="логотипы">Логотипы</button>
@@ -154,7 +145,6 @@
           <button class="filter__btn" type="button" data-filter="баннера">Баннера</button>
         </div>
 
-        <!-- Category Anchors -->
         <div class="category-anchors" aria-hidden="true">
           <span id="category-логотипы"></span>
           <span id="category-branding"></span>
@@ -165,16 +155,15 @@
           <span id="category-banners"></span>
         </div>
 
-        <!-- Project Cards -->
         <div class="projects-grid" id="projectsGrid">
-          <!-- Project cards rendered by JavaScript -->
+      
         </div>
       </div>
     </section>
 
 
 
-    <!-- ABOUT -->
+
     <section class="about section" id="about">
       <div class="container">
         <div class="section-header reveal">
@@ -183,7 +172,7 @@
         </div>
 
 
-        <!-- Feature Cards -->
+    
 
     <div class="features-grid">
 
@@ -260,7 +249,7 @@
 
 
 
-    <!-- EDUCATION -->
+
     <section class="education section" id="education">
       <div class="container">
         <div class="section-header reveal">
@@ -310,7 +299,7 @@
       </div>
     </section>
 
-     <!-- SKILLS -->
+
     <section class="skills section" id="skills">
       <div class="container">
         <div class="section-header reveal">
@@ -319,13 +308,13 @@
         </div>
 
         <div class="skills-grid" id="skillsGrid">
-          <!-- Skills cards rendered by JavaScript for easy editing -->
+    
         </div>
       </div>
     </section>
 
 
-    <!-- CONTACT -->
+
     <section class="contact section" id="contact">
       <div class="container">
         <div class="section-header reveal">
@@ -406,7 +395,7 @@
 
   </main>
 
-  <!-- FOOTER -->
+
 <footer class="footer">
   <div class="container footer__inner">
     <p class="footer__copy">&copy; 2026 Daria Zinchuk</p>
@@ -440,14 +429,14 @@
   </div>
 </footer>
 
-  <!-- Back to Top -->
+
   <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
       <path d="M12 19V5M5 12l7-7 7 7"/>
     </svg>
   </button>
 
-  <!-- Project Modal -->
+
   <div class="modal" id="projectModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="modal__overlay" id="modalOverlay"></div>
     <div class="modal__container">
@@ -457,12 +446,12 @@
         </svg>
       </button>
       <div class="modal__content" id="modalContent">
-        <!-- Modal content injected by JavaScript -->
+  
       </div>
     </div>
   </div>
 
-  <!-- Lightbox -->
+
   <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Image preview">
     <div class="lightbox__overlay" id="lightboxOverlay"></div>
     <button class="lightbox__close" id="lightboxClose" type="button" aria-label="Close image preview">
